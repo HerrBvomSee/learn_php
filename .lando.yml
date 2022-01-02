@@ -1,9 +1,12 @@
 name: php_learn
+recipe: lamp
 
 config:
   php: '8.0'
   xdebug: true
   ssl: false
   webroot: .
-  composer_version: 2.0.7
-recipe: lamp
+  composer_version: 2
+  conf:
+    php: .vscode/php.ini
+

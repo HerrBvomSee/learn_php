@@ -1,8 +1,10 @@
 <section id="shares" class="section has-text-centered">
-    <a href="<?php echo ROOT_URL; ?>/shares/add" class="button m-4 is-primary">Eintrag hinzufügen</a>
-
+    <?php if (isset($_SESSION['is_logged_in'])) : ?>
+        <a href="<?php echo ROOT_URL; ?>/shares/add" class="button m-4 is-primary">Eintrag hinzufügen</a>
+    <?php endif; ?>
+    
     <?php
-    foreach ($viewmodel as $item) : ?>
+    foreach ($viewModel as $item) : ?>
         <div class="box">
             <div class="block py-1">
                 <h3 class="mb-0 subtitle has-text-white has-background-grey py-2">

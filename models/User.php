@@ -42,7 +42,7 @@ class UserModel extends Model
                 );
                 header('Location: ' . ROOT_URL . '/shares');
             } else {
-                echo 'Wrong login!';
+                Messages::setMessage('Incorrect login!', 'error');
             }
         }
         return;
